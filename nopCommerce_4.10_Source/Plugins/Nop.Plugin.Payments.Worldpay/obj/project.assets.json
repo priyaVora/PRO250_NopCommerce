@@ -13823,11 +13823,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.Payments.Worldpay\\Nop.Plugin.Payments.Worldpay.csproj",
+      "projectUniqueName": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.Payments.Worldpay\\Nop.Plugin.Payments.Worldpay.csproj",
       "projectName": "Nop.Plugin.Payments.Worldpay",
-      "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.Payments.Worldpay\\Nop.Plugin.Payments.Worldpay.csproj",
+      "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.Payments.Worldpay\\Nop.Plugin.Payments.Worldpay.csproj",
       "packagesPath": "C:\\Users\\Priya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.Payments.Worldpay\\obj\\",
+      "outputPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.Payments.Worldpay\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13846,8 +13846,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Presentation\\Nop.Web\\Nop.Web.csproj": {
-              "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Presentation\\Nop.Web\\Nop.Web.csproj"
+            "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Presentation\\Nop.Web\\Nop.Web.csproj": {
+              "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Presentation\\Nop.Web\\Nop.Web.csproj"
             }
           }
         }

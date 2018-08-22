@@ -1,0 +1,5 @@
+﻿{
+  "DataProvider": "sqlserver",
+  "DataConnectionString": "Data Source=nopcommerce1.database.windows.net;Initial Catalog=NopCommerce;Integrated Security=False;Persist Security Info=False;User ID=ncom;Password=nopcommerce1!",
+  "RawDataSettings": {}
+}

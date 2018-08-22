@@ -13663,11 +13663,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+      "projectUniqueName": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\Nop.Plugin.ExchangeRate.EcbExchange.csproj",
       "projectName": "Nop.Plugin.ExchangeRate.EcbExchange",
-      "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\Nop.Plugin.ExchangeRate.EcbExchange.csproj",
+      "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\Nop.Plugin.ExchangeRate.EcbExchange.csproj",
       "packagesPath": "C:\\Users\\Priya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\obj\\",
+      "outputPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.ExchangeRate.EcbExchange\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13686,8 +13686,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
-              "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Libraries\\Nop.Services\\Nop.Services.csproj"
+            "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Libraries\\Nop.Services\\Nop.Services.csproj": {
+              "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Libraries\\Nop.Services\\Nop.Services.csproj"
             }
           }
         }

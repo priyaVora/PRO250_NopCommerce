@@ -12742,11 +12742,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
       "projectName": "Nop.Data",
-      "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+      "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
       "packagesPath": "C:\\Users\\Priya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\obj\\",
+      "outputPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12765,8 +12765,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-              "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+            "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+              "projectPath": "C:\\Users\\Priya\\Documents\\Personal Workspaces\\Nop_project\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
             }
           }
         }
