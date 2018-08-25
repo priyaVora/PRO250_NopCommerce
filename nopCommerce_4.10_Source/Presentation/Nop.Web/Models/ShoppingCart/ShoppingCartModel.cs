@@ -22,7 +22,7 @@ namespace Nop.Web.Models.ShoppingCart
         }
 
         public bool OnePageCheckoutEnabled { get; set; }
-
+       
         public bool ShowSku { get; set; }
         public bool ShowProductImages { get; set; }
         public bool IsEditable { get; set; }
@@ -88,6 +88,7 @@ namespace Nop.Web.Models.ShoppingCart
 
             public bool DisableRemoval { get; set; }
 
+            public bool AddToWishListFromCart { get; set; }
             public IList<string> Warnings { get; set; }
         }
 

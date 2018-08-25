@@ -125,8 +125,16 @@ input[type="button"], input[type="submit"],
 button, .button-1, .button-2 {
 	cursor: pointer;
 }
+input[type="button"], input[type="submit"],
+button, .button-3 {
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #248ece;
+    padding: 5px;
+    color: #248ece;
+}
 label, label + * {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .master-wrapper-content {

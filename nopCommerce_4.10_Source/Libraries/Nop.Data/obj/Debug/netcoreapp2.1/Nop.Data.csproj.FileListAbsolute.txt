@@ -33,3 +33,14 @@ C:\Users\John\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Librar
 C:\Users\John\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Data.deps.json
 C:\Users\John\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Data.dll
 C:\Users\John\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Data.pdb
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Data.deps.json
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Data.dll
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Data.pdb
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Core.dll
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\bin\Debug\netcoreapp2.1\Nop.Core.pdb
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Debug\netcoreapp2.1\Nop.Data.csprojResolveAssemblyReference.cache
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Debug\netcoreapp2.1\Nop.Data.csproj.CoreCompileInputs.cache
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Debug\netcoreapp2.1\Nop.Data.AssemblyInfoInputs.cache
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Debug\netcoreapp2.1\Nop.Data.AssemblyInfo.cs
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Debug\netcoreapp2.1\Nop.Data.dll
+C:\Users\Priya\Documents\GitHub\PRO250_NopCommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Debug\netcoreapp2.1\Nop.Data.pdb
