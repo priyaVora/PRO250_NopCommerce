@@ -12733,23 +12733,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\John\\.nuget\\packages\\": {},
+    "C:\\Users\\Priya\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "4.1.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
       "projectName": "Nop.Data",
-      "projectPath": "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
-      "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\obj\\",
+      "projectPath": "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+      "packagesPath": "C:\\Users\\Priya\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\John\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Priya\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12762,8 +12765,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-              "projectPath": "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+            "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+              "projectPath": "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
             }
           }
         }
