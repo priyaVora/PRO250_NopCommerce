@@ -4,3 +4,4 @@
 *.ide-wal
 *.cache
 *.cache
+*.config

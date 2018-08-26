@@ -12483,26 +12483,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Priya\\.nuget\\packages\\": {},
+    "C:\\Users\\John\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "4.1.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
+      "projectUniqueName": "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
       "projectName": "Nop.Core",
-      "projectPath": "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
-      "packagesPath": "C:\\Users\\Priya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Priya\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\obj\\",
+      "projectPath": "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj",
+      "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\John\\Documents\\GitHub\\PRO250_NopCommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Priya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\John\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
