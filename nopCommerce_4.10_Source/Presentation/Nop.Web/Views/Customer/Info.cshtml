@@ -15,6 +15,7 @@
 @section left
     {
     @await Component.InvokeAsync("CustomerNavigation", new { selectedTabId = CustomerNavigationEnum.Info })
+    @await Component.InvokeAsync("StoreThemeSelector")
 }
 
 @if (Model.CountryEnabled && Model.StateProvinceEnabled)
@@ -184,11 +185,11 @@
                 </div>
             }
             @if (Model.StreetAddressEnabled ||
-        Model.StreetAddress2Enabled ||
-        Model.ZipPostalCodeEnabled ||
-        Model.CityEnabled ||
-        Model.CountyEnabled ||
-        Model.CountryEnabled)
+       Model.StreetAddress2Enabled ||
+       Model.ZipPostalCodeEnabled ||
+       Model.CityEnabled ||
+       Model.CountyEnabled ||
+       Model.CountryEnabled)
             {
                 <div class="fieldset">
                     <div class="title">

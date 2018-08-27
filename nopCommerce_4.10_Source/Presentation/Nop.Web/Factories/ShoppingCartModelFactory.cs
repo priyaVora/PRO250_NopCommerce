@@ -372,6 +372,9 @@ namespace Nop.Web.Factories
             //1. do other items require this one?
             cartItemModel.DisableRemoval = cart.Any(item => item.Product.RequireOtherProducts && _productService.ParseRequiredProductIds(item.Product).Contains(sci.ProductId));
 
+            //addToCart
+            cartItemModel.AddToWishListFromCart = cart.Any(item => item.Product.RequireOtherProducts && _productService.ParseRequiredProductIds(item.Product).Contains(sci.ProductId));
+
             //allowed quantities
             var allowedQuantities = _productService.ParseAllowedQuantities(sci.Product);
             foreach (var qty in allowedQuantities)

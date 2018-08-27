@@ -125,8 +125,16 @@ input[type="button"], input[type="submit"],
 button, .button-1, .button-2 {
 	cursor: pointer;
 }
+input[type="button"], input[type="submit"],
+button, .button-3 {
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #248ece;
+    padding: 5px;
+    color: #248ece;
+}
 label, label + * {
-	vertical-align: middle;
+    vertical-align: middle;
 }
 
 .master-wrapper-content {
@@ -1054,6 +1062,13 @@ label, label + * {
 }
 .theme-selector select {
 	width: 170px;
+    padding-left: 0px;
+    color: #000;
+    background-color: #fff;
+    margin-top: -45px;
+    border: none;
+    font-size: 16px;
+    text-align: left;
 }
 
 

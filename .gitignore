@@ -54,3 +54,11 @@ nopCommerce_4\.10_Source/Tests/Nop\.Services\.Tests/obj/
 nopCommerce_4\.10_Source/Tests/Nop\.Tests/obj/
 
 nopCommerce_4\.10_Source/Tests/Nop\.Web\.MVC\.Tests/obj/
+
+
+*.ide
+*.ide-shm
+*.ide-wal
+*.cache
+*.cache
+*.config
