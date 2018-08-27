@@ -17,6 +17,7 @@ namespace Nop.Web.Models.ShoppingCart
             GiftCardBox = new GiftCardBoxModel();
             CheckoutAttributes = new List<CheckoutAttributeModel>();
             OrderReviewData = new OrderReviewDataModel();
+            AvailableSortOptions = new List<SelectListItem>();
 
             ButtonPaymentMethodViewComponentNames = new List<string>();
         }
@@ -44,6 +45,11 @@ namespace Nop.Web.Models.ShoppingCart
 
         public bool HideCheckoutButton { get; set; }
         public bool ShowVendorName { get; set; }
+
+        /// <summary>
+        /// Available sort options
+        /// </summary>
+        public IList<SelectListItem> AvailableSortOptions { get; set; }
 
         #region Nested Classes
 

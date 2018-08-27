@@ -825,6 +825,12 @@ namespace Nop.Web.Factories
             model.TermsOfServiceOnOrderConfirmPage = _orderSettings.TermsOfServiceOnOrderConfirmPage;
             model.TermsOfServicePopup = _commonSettings.PopupForTermsOfServiceLinks;
             model.DisplayTaxShippingInfo = _catalogSettings.DisplayTaxShippingInfoShoppingCart;
+            
+            model.AvailableSortOptions.Add(new SelectListItem("Default", "/cart"));
+            model.AvailableSortOptions.Add(new SelectListItem("Name: A to Z", "/cart?sort=aToZ"));
+            model.AvailableSortOptions.Add(new SelectListItem("Name: Z to A", "/cart?sort=zToA"));
+            model.AvailableSortOptions.Add(new SelectListItem("Price: Low to High", "/cart?sort=lowToHigh"));
+            model.AvailableSortOptions.Add(new SelectListItem("Price: High to Low", "/cart?sort=highToLow"));
 
             //discount and gift card boxes
             model.DiscountBox.Display = _shoppingCartSettings.ShowDiscountBox;
@@ -915,6 +921,12 @@ namespace Nop.Web.Factories
             model.IsEditable = isEditable;
             model.DisplayAddToCart = _permissionService.Authorize(StandardPermissionProvider.EnableShoppingCart);
             model.DisplayTaxShippingInfo = _catalogSettings.DisplayTaxShippingInfoWishlist;
+            
+            model.AvailableSortOptions.Add(new SelectListItem("Default", "/wishlist"));
+            model.AvailableSortOptions.Add(new SelectListItem("Name: A to Z", "/wishlist?sort=aToZ"));
+            model.AvailableSortOptions.Add(new SelectListItem("Name: Z to A", "/wishlist?sort=zToA"));
+            model.AvailableSortOptions.Add(new SelectListItem("Price: Low to High", "/wishlist?sort=lowToHigh"));
+            model.AvailableSortOptions.Add(new SelectListItem("Price: High to Low", "/wishlist?sort=highToLow"));
 
             if (!cart.Any())
                 return model;

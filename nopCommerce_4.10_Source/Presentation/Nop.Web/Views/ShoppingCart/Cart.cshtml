@@ -15,7 +15,11 @@
     <div class="page-title">
         <h1>@T("ShoppingCart")</h1>
     </div>
+    <div class="product-sorting" id="product-sorting">
+        <span>@T("Catalog.OrderBy")</span>
+        @Html.DropDownList("products-orderby", Model.AvailableSortOptions, new {onchange = "setLocation(this.value);", aria_label = T("Catalog.OrderBy.Label")})
+    </div>
     <div class="page-body">
-        @await Component.InvokeAsync("OrderSummary", new { overriddenModel = Model})
+        @await Component.InvokeAsync("OrderSummary", new {overriddenModel = Model})
     </div>
 </div>

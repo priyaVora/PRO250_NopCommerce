@@ -12,6 +12,7 @@ namespace Nop.Web.Models.ShoppingCart
         {
             Items = new List<ShoppingCartItemModel>();
             Warnings = new List<string>();
+            AvailableSortOptions = new List<SelectListItem>();
         }
 
         public Guid CustomerGuid { get; set; }
@@ -32,6 +33,11 @@ namespace Nop.Web.Models.ShoppingCart
         public IList<ShoppingCartItemModel> Items { get; set; }
 
         public IList<string> Warnings { get; set; }
+
+        /// <summary>
+        /// Available sort options
+        /// </summary>
+        public IList<SelectListItem> AvailableSortOptions { get; set; }
         
 		#region Nested Classes
 
