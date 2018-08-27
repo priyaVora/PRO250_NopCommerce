@@ -12,16 +12,34 @@
 {
     @await Component.InvokeAsync("CustomerNavigation", new { selectedTabId = CustomerNavigationEnum.Addresses })
 }
+
+
 <div class="page account-page address-list-page">
-    <input type="text" class="search-box-text" id="small-searchterms" autocomplete="off" name="q" placeholder="@T("Search.SearchBox.Tooltip")" aria-label="@T("Search.SearchBox.Text.Label")" />
-    <input type="submit" class="button-1 search-box-button" value="@T("Search.Button")" />
+    <input type="text" class="search-box-text search_address_box" id="search_address_box" autocomplete="off" name="q" placeholder="@T("Search.SearchBox.Tooltip")" aria-label="@T("Search.SearchBox.Text.Label")" />
+    <input type="submit" class="button-1 search-box-button search_address_button" id="search_address_button" value="@T("Search.Button")" />
+
     <div class="page-title">
         <h1>@T("Account.MyAccount") - @T("Account.CustomerAddresses")</h1>
     </div>
+    <script>
+        var search_box = document.getElementsByClassName("search_address_box");
+        if (true) {
+            var search_address_button = document.getElementsByClassName("search_address_button");
+            document.getElementById("search_address_button").addEventListener("click", function () {
+                console.log("Clicked!");
+                var i = 0;
+                console.log(search_box.getElementById());
+            });
+        }
+    </script>
+
+
+
     <div class="page-body">
         <nop-antiforgery-token />
         @if (Model.Addresses.Count > 0)
         {
+
             <div class="address-list">
                 @for (var i = 0; i < Model.Addresses.Count; i++)
                 {
@@ -69,9 +87,9 @@
                                 </li>
                             }
                             @if (address.CityEnabled && !string.IsNullOrEmpty(address.City) ||
-                      address.CountyEnabled && !string.IsNullOrEmpty(address.County) ||
-                      address.StateProvinceEnabled && !string.IsNullOrEmpty(address.StateProvinceName) ||
-                      address.ZipPostalCodeEnabled && !string.IsNullOrEmpty(address.ZipPostalCode))
+              address.CountyEnabled && !string.IsNullOrEmpty(address.County) ||
+              address.StateProvinceEnabled && !string.IsNullOrEmpty(address.StateProvinceName) ||
+              address.ZipPostalCodeEnabled && !string.IsNullOrEmpty(address.ZipPostalCode))
                             {
                                 var addressLine = string.Empty;
                                 if (address.CityEnabled && !string.IsNullOrEmpty(address.City))

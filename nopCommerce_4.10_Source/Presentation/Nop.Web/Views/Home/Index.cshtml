@@ -21,3 +21,106 @@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBottom })
     </div>
 </div>
+
+<div class="chatbox" id="chatbox">
+    <div class="chatBoxBar" id="chatBoxBar"></div>
+    <div class="chatlogs" id="chatlogs">
+        <div class="chat friend" id="result">
+            <div class="bot-photo"></div>
+            <p class="chat-message">
+                Hello, I am Natasha your Customer Service Assistant today!
+                How can I help you?
+            </p>
+        </div>
+
+        <div class="chat self" id="ans-show">
+            <div class="user-photo"></div>
+            <p class="chat-message">Hello.</p>
+        </div>
+        <div class="chat friend" id="result">
+            <div class="bot-photo"></div>
+            <p class="chat-message">"Hello again, May I ask you what you are looking for?"</p>
+        </div>
+
+        <div class="chat self" id="ans-show">
+            <div class="user-photo"></div>
+            <p class="chat-message">I need help finding an item on page.</p>
+        </div>
+        <div class="chat friend" id="result">
+            <div class="bot-photo"></div>
+            <p class="chat-message">"Sure, I can help you with that!"</p>
+        </div>
+        <div class="chat friend" id="result">
+            <div class="bot-photo"></div>
+            <p class="chat-message">"Give me one moment..."</p>
+        </div>
+
+    </div>
+    <div class="chat-form">
+        <input type="text" id="ans" placeholder="Enter your response here" required />
+        <button id="chat_send_button">Send</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById("chat_send_button").addEventListener("click", send_message);
+    var questions = [
+        'What\'s your name',
+        'Where are you from?',
+        'What\'s your age?',
+        'What profile you are working on?',
+        'It was nice talking to you :)'
+    ];
+
+    function send_message_to_chat(class_name, id_name, photo_id) {
+        var innerDiv = document.createElement('div');
+        innerDiv.className = class_name;
+        innerDiv.id = id_name;
+        document.getElementById("chatlogs").appendChild(innerDiv);
+
+        var userPhotoDiv = document.createElement('div');
+        userPhotoDiv.className = photo_id;
+        innerDiv.appendChild(userPhotoDiv);
+        var client_message = document.getElementById('ans').value;
+
+        var node = document.createElement("p");
+        node.className = "chat-message";
+        if (class_name == 'chat self') {
+            var responseNode = document.createTextNode(client_message);
+        } else {
+            var responseNode = document.createTextNode(questions[0]);
+        }
+        node.appendChild(responseNode);
+
+        innerDiv.appendChild(node);
+        document.getElementById("chatlogs").appendChild(innerDiv);
+    }
+
+
+    function send_message() {
+        client_message = document.getElementById('ans').value;
+        if (client_message != null && client_message != "") {
+            console.log("Client Side Message: " + client_message);
+
+            send_message_to_chat('chat self', 'ans-show', 'user-photo');
+            chat_bot_response();
+
+            $(document).ready(function () {
+                $('#chatlogs').animate({
+                    scrollTop: $('#chatlogs').get(0).scrollHeight
+                }, 2000);
+
+            });
+        }
+    }
+
+    function chat_bot_response() {
+        var chat_reponse = questions[0];
+        send_message_to_chat('chat friend', 'result', 'bot-photo');
+        var objDiv = document.getElementById("chatlogs");
+        objDiv.scrollTop = objDiv.scrollHeight;
+
+        $('#chatlogs').scrollTop($('#chatlogs')[0].scrollHeight);
+        console.log("NATASHA: " + questions[0]);
+    }
+</script>
