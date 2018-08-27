@@ -62,3 +62,7 @@ nopCommerce_4\.10_Source/Tests/Nop\.Web\.MVC\.Tests/obj/
 *.cache
 *.cache
 *.config
+
+nopCommerce_4\.10_Source/Plugins/
+
+nopCommerce_4\.10_Source/Tests/
