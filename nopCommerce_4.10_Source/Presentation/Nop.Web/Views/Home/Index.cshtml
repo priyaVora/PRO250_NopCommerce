@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="chat-form">
-        <input type="text" id="ans" placeholder="Enter your response here" required />
+        <input type="text" class="ans" id="ans" placeholder="Enter your response here" required />
         <button id="chat_send_button">Send</button>
     </div>
 </div>
@@ -46,6 +46,12 @@
 
         <script>
             document.getElementById("chat_send_button").addEventListener("click", send_message);
+            document.querySelector('#ans').addEventListener('keypress', function (e) {
+                var key = e.which || e.keyCode;
+                if (key === 13) { // 13 is enter
+                    document.getElementById("chat_send_button").click();
+                }
+            });
             var questions = [
                 'Hi, how can I help you, today',
                 'Where are you from?',
