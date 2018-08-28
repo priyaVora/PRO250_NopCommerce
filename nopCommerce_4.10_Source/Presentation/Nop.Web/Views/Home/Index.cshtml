@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SearchBoxModel
+@using System.Text.Encodings.Web
+@{
     Layout = "_ColumnsOne";
 
     //page class
@@ -75,7 +77,7 @@
             var help = [
                 'I see that you requested help',
                 'Here is a list of categories that I can help you in: ',
-                '(Enter number corresponding to any given options below, for further assistance)',
+                '(Enter number or the titles of any option for further assistance)',
                 '1. Report damage products',
                 '2. Report missing delivery item',
                 '3. Need help in website direction',
@@ -103,10 +105,10 @@
                         chat_bot_response = `To search Products write: FIND before your search input in this chat.`;
                     } else if (user_response == 6) {
                         chat_bot_response = `Customer Service can be reached by directing yourself to the footer of any page. Click on Contact US.There you will reach us electronically. We will ask you to provide us with your name,
-       email and your report information. Sorry, for any inconvenience. `;
+                       email and your report information. Sorry, for any inconvenience. `;
                     } else if (user_response == 7) {
                         chat_bot_response = `NopCommerce is our open-source E-commerce platoform that is based upon ASP\.net MVC & MS SQL Server backend database. Development of our nopCommerce website started around 2008
-      by Andrei Mazulnitsyn, from Yaroslavi, Russia.Based on a report from December 2016, about 30,950 websites have utilized our website to expand their companies.`;
+                      by Andrei Mazulnitsyn, from Yaroslavi, Russia.Based on a report from December 2016, about 30,950 websites have utilized our website to expand their companies.`;
                     } else {
                         chat_bot_response = `I didn't understand what you said. Can you repeat yourself?`;
                     }
@@ -115,7 +117,10 @@
                 }
                 return chat_bot_response;
             }
-
+         
+            $(window).bind('beforeunload', function () {
+                return 'Are you sure you want to leave?';
+            });
             function send_message_to_chat(client_message, class_name, id_name, photo_id) {
                 client_message = $.trim(client_message);
                 console.log(client_message);
@@ -145,29 +150,30 @@
                             } else if (isFinite(String(client_message))) {
                                 console.log(client_message);
 
-                                if (client_message == 1) {
-                                    var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
-                                } else if (client_message == 1) {
-                                    var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
-                                } else if (client_message == 2) {
-                                    var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
-                                } else if (client_message == 3) {
-                                    var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
-                                } else if (client_message == 4) {
-                                    var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
-                                } else if (client_message == 5) {
-                                    var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
-                                } else if (client_message == 6) {
-                                    var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
-                                } else if (client_message == 7) {
+                                if (client_message > 0 && client_message < 8) {
                                     var responseNode = document.createTextNode(valid_chatbot_helpresponse(client_message));
                                 } else {
                                     var responseNode = document.createTextNode("Sorry that is not one of the help menu selection.");
                                 }
 
+
                                 node.appendChild(responseNode);
                                 innerDiv.appendChild(node);
                                 document.getElementById("chatlogs").appendChild(innerDiv);
+                            } else if (client_message.includes("find") || client_message.includes("FIND")) {
+                                var responseNode = document.createTextNode("I don't understand what you are trying to find, can you try telling me again...?!");
+                                var i = 0;
+                                
+                                loop: for (i = 0; i < product_language.length; i++) {
+                                    if (client_message.includes(product_language[i])) {
+                                        var responseNode = document.createTextNode('Sure I can direct you to the ' + product_language[i] + ' page. Give me one moment...');
+                                        var original_search_box = document.getElementById("small-searchterms").value = product_language[i];
+                                        var original_search_button = document.getElementById("original_search_button").click();
+                                        break loop;
+                                    }
+                                }
+                                
+                          
                             } else {
                                 var responseNode = document.createTextNode("Sorry can I help you with something, I did not understand...?");
                                 node.appendChild(responseNode);
@@ -176,6 +182,7 @@
                             }
                         }
                     }
+
 
                     if (responseNode != null) {
                         node.appendChild(responseNode);
