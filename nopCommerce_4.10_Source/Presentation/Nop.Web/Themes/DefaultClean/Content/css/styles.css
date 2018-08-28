@@ -233,7 +233,6 @@ label, label + * {
 }
 
 /*********** CHAT BOT CSS ***********/
-
 * {
     margin: 0;
     padding: 0;
@@ -244,7 +243,7 @@ label, label + * {
 
 
 .chatBoxBar {
-    width: 340px;
+    width: 290px;
     height: 45px;
     background-color: #000;
     padding-top: 0px;
@@ -253,8 +252,8 @@ label, label + * {
 }
 
 .chatbox {
-    width: 360px;
-    min-width: 290px;
+    width: 290px;
+    min-width: 405px;
     height: auto;
     padding: 10px;
     padding-top: 10px;
@@ -270,9 +269,9 @@ label, label + * {
 }
 
 .chatlogs {
-    padding: 10px;
+    padding: 8px;
     width: 100%;
-    height: 350px;
+    height: 415px;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -282,8 +281,6 @@ label, label + * {
     }
 
     .chatlogs::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background-repeat: rgba(0, 0, 0, .1);
     }
 
 .chat {
@@ -384,6 +381,7 @@ label, label + * {
             background: #13c8d9;
         }
 
+        
 
 /*********** GLOBAL FORMS ***********/
 
