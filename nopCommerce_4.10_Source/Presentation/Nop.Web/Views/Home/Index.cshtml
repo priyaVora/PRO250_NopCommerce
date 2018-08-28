@@ -29,7 +29,7 @@
     <div class="chatlogs" id="chatlogs">
         <div class="chat friend" id="result">
             <div class="bot-photo"></div>
-            <p class="chat-message">
+            <p class="chat-message" id="chat-message">
                 Hello, I am Natasha your Customer Service Assistant today!
                 How can I help you?
             </p>
@@ -47,7 +47,7 @@
         <script>
             document.getElementById("chat_send_button").addEventListener("click", send_message);
             var questions = [
-                'Hi, I am Natasha how can I help you, today',
+                'Hi, how can I help you, today',
                 'Where are you from?',
                 'What\'s your age?',
                 'What profile you are working on?',
@@ -157,8 +157,7 @@
                 }
                 return chat_bot_response;
             }
-
-
+            
             function valid_chatbot_helpresponse(user_response) {
                 var chat_bot_response = "";
                 if (user_response != null) {
