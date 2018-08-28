@@ -71,7 +71,34 @@
                 'books',
                 'accesories',
                 'jewerly',
-                'gift-cards'
+                'gift-cards',
+                'table',
+                'camera',
+                'running shoes',
+                'Running shoes',
+                'Notebooks',
+                'Software',
+                'adobe photoshop cs4',
+                'Windows',
+                'Apple',
+                'MacBook',
+                'Sleekbook',
+                'HP Spectre XT Pro UltraBook',
+                '$25',
+                '$100',
+                'virtual',
+                'elegant',
+                'Gemstone',
+                'Necklace',
+                'Flower',
+                'Girl',
+                'Braclet',
+                'Vintage',
+                'Engagement',
+                'Bracelet',
+                'Science',
+                'Pride and Prejudice',
+                'First',
             ];
 
             var help = [
@@ -88,6 +115,49 @@
             ];
 
 
+            var help = [
+                'I see that you requested help',
+                'Here is a list of categories that I can help you in: ',
+                '(Enter number or the titles of any option for further assistance)',
+                '1. Report damage products',
+                '2. Report missing delivery item',
+                '3. Need help in website direction',
+                '4. Product Sugguestion',
+                '5. Search products',
+                '6. Get customer service info',
+                '7. More Information on Nop-Commerce',
+            ];
+
+            function option4_response_product_rec() {
+                var rand_num = Math.floor(Math.random() * 10) * Math.floor(Math.random() * 10);
+                if (rand_num % 2 == 0) {
+                    var chat_bot_response = "I see that you want product sugguestions...Well let's see... ";
+                } else {
+                    var chat_bot_response = "There are many things I can sugguest to you...Okay, I would say... ";
+                }
+
+                if (rand_num < 5) {
+                    chat_bot_response += `Many people buy shoes, deskstops, software products to cell phones. Why don't you search some of these products to find out, & come back to us for help after?`;
+                } else if (rand_num > 5 && rand_num < 10) {
+                    chat_bot_response += `We have some amazing technological devices that you may be interested in, some of them include, Build your own computer. For only $1,200 you can build your on computer to work on! 
+                    If you are not into that then, we have a digital storm Vanquish 3 custom performance pc. This product is a little bit expensive then the previous one I mentioned, by only $59. Well,
+                    if price is one of the issues another PC we have is a Lenovo IdeaCentre 600. Its a All- One, which makes it convenient for you. And this one is ONLY $500 dollars! Why don't you check those out?!`;
+                } else if (rand_num > 10 && rand_num < 20) {
+                    chat_bot_response += `Cameras are one of our high selling products for customers. We have the best quality cameras you may ever find. One camera I would sugguest is our Nikon D5500 DSLR.`;
+                } else if (rand_num > 20 && rand_num < 30) {
+                    chat_bot_response += `Check out our latest trends of clothes we have you! Our clothing range from $15 to $35 dollars. Why don't you check out our Custom T-shirts for only $15.`;
+                } else if (rand_num > 30 && rand_num < 40) {
+                    chat_bot_response += `When it comes to shoes Nike and Adidas have their game. We sell the top brands of shoes in affordable price. Nike SB Zoom Stefan Janoski are avaible right now for $30 dollars sale.`;
+                } else if (rand_num > 40 && rand_num < 50) {
+                    chat_bot_response += `We have a wide collection of books to look at, such as Pride and Prejudice, First Prize pies and more.`;
+                } else if (rand_num > 50 && rand_num < 60) {
+                    chat_bot_response += `Our latest fashion jewelry is avaliable, one being the Elegant Gemstone Necklace to Vintage Style Engagement ring.`;
+                } else {
+                    chat_bot_response += `You can buy gift cards around $25, $50, $100.`;
+                }
+                return chat_bot_response;
+            }
+
 
             function valid_chatbot_helpresponse(user_response) {
                 var chat_bot_response = "";
@@ -100,7 +170,8 @@
                         chat_bot_response = `There various categories of items you can select from on our page.   \n`;
                         chat_bot_response += 'The main categories you can see on the page are Computer, Electronics, Apparel, Digital Download, Books, Jewerly, Gift Cards.For detailed list of categories just hoever over each categories throughout the website.';
                     } else if (user_response == 4) {
-                        chat_bot_response = `What kinds of product are you looking for? Why don't you tell me more about it, and I am happy to help you!`;
+                        option4_response_product_rec();
+                        chat_bot_response = option4_response_product_rec();
                     } else if (user_response == 5) {
                         chat_bot_response = `To search Products write: FIND before your search input in this chat.`;
                     } else if (user_response == 6) {
@@ -166,14 +237,21 @@
                                 
                                 loop: for (i = 0; i < product_language.length; i++) {
                                     if (client_message.includes(product_language[i])) {
-                                        var responseNode = document.createTextNode('Sure I can direct you to the ' + product_language[i] + ' page. Give me one moment...');
+                                        var responseNode = document.createTextNode('Sure I can direct you to the ' + product_language[i] + ' page. Give me one moment... It was great helping you! ');
                                         var original_search_box = document.getElementById("small-searchterms").value = product_language[i];
                                         var original_search_button = document.getElementById("original_search_button").click();
                                         break loop;
                                     }
                                 }
-                                
-                          
+                            } else if (client_message.includes("looking") || client_message.includes(Looking) || client_message.includes("finding") || client_message.includes("Finding")) {
+                                loop: for (i = 0; i < product_language.length; i++) {
+                                    if (client_message.includes(product_language[i])) {
+                                        var responseNode = document.createTextNode('Sure I can direct you to the ' + product_language[i] + ' page. Give me one moment... It was great helping you! ');
+                                        var original_search_box = document.getElementById("small-searchterms").value = product_language[i];
+                                        var original_search_button = document.getElementById("original_search_button").click();
+                                        break loop;
+                                    }
+                                }
                             } else {
                                 var responseNode = document.createTextNode("Sorry can I help you with something, I did not understand...?");
                                 node.appendChild(responseNode);
@@ -191,6 +269,9 @@
                     document.getElementById("chatlogs").appendChild(innerDiv);
                 }
             }
+
+            
+            
 
             function help_menu_assistance(node, innerDiv) {
                 var i = 0;
@@ -219,6 +300,7 @@
                         scrollTop: $('#chatlogs').get(0).scrollHeight
                     }, 2000);
                 });
+                document.getElementById('ans').value = '';
             }
 
             function send_message() {
@@ -236,6 +318,7 @@
 
                     scroll_chat();
                 }
+
             }
 
             function chat_bot_response() {
