@@ -233,7 +233,7 @@ label, label + * {
 }
 
 /*********** CHAT BOT CSS ***********/
-* {
+{
     margin: 0;
     padding: 0;
     font-family: tahoma, sans-serif;
@@ -307,7 +307,7 @@ label, label + * {
 
     .chat .chat-message {
         width: 75%;
-        padding: 10px;
+        padding: 8px;
         margin: 5px 5px 0;
         background: #1ddced;
         border-radius: 10px;
