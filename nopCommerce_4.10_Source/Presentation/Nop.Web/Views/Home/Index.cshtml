@@ -192,15 +192,57 @@
                 });
 
              var chat_cust_button = document.getElementById("chat_button_cust").addEventListener("click", function () {
-                 console.log("CUST");
+                
+
+                     var responseNode = document.createTextNode("For any customer service assistance please enter help to view our 'Help Menu'. ");
+                     var innerDiv = document.createElement('div');
+                             var node = document.createElement("p");
+                             node.className = "chat-message";
+                             node.appendChild(responseNode);
+                             innerDiv.appendChild(node);
+                             document.getElementById("chatlogs").appendChild(innerDiv);
+                         
              });
 
              var chat_search_button = document.getElementById("chat_button_search").addEventListener("click", function () {
-                 console.log("CUST");
+
+                 var responseNode = document.createTextNode("For any product search enter just enter your product details below.");
+                 var innerDiv = document.createElement('div');
+                 var node = document.createElement("p");
+                 node.className = "chat-message";
+                 node.appendChild(responseNode);
+                 innerDiv.appendChild(node);
+                 document.getElementById("chatlogs").appendChild(innerDiv);
+                           console.log("CUST");
              });
 
              var chat_sugguestion_button = document.getElementById("chat_button_sugguestion").addEventListener("click", function () {
-                 console.log("CUST");
+                 var rand_num = Math.floor(Math.random() * product_language.length);
+                 var original_search_box = document.getElementById("small-searchterms").value = product_language[rand_num];
+                 var original_search_button = document.getElementById("original_search_button").click();
+
+                 var responseNode = document.createTextNode("We found a product you might like...");
+
+                 var innerDiv = document.createElement('div');
+                 innerDiv.className = 'chat friend';
+                 innerDiv.id = 'result';
+                 document.getElementById("chatlogs").appendChild(innerDiv);
+
+                 var userPhotoDiv = document.createElement('div');
+                 userPhotoDiv.className = 'bot-photo';
+                 innerDiv.appendChild(userPhotoDiv);
+                 var client_message = document.getElementById('ans').value;
+
+                 var node = document.createElement("p");
+                 node.className = "chat-message";
+
+
+                 var node = document.createElement("p");
+                 node.className = "chat-message";
+                 node.appendChild(responseNode);
+                 innerDiv.appendChild(node);
+                 document.getElementById("chatlogs").appendChild(innerDiv);
+                 
              });
 
 
