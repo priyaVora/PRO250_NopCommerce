@@ -31,7 +31,7 @@
         </div>
         <button class="cust" id="chat_button_cust">Customer Service</button>
         <button class="search" id="chat_button_search">Search</button>
-        <button class="sug" id="chat_button_sugguestion">Sugguestion</button>
+        <button class="sug" id="chat_button_sugguestion">Suggestion</button>
     </div>
     <div class="chatlogs" id="chatlogs">
         <div class="chat friend" id="result">
@@ -71,12 +71,6 @@
             ];
 
             var product_language = [
-                'computer',
-                'computer',
-                'apparel',
-                'electronics',
-                'digital downloads',
-                'books',
                 'Henna',
                 'henna',
                 'Build your own computer',
@@ -105,13 +99,14 @@
                 'Nike Floral Roshe Customized Running Shoes',
                 'Nike SB Zoom Stefan Janoski "Medium Mint',
                 'Custom T-Shirt',
-                `Levi\s 511 Jeans`,
+                `Levi`,
+                '511',
+                'Jeans',
                 'Nike Tailwind Loose Short-Sleeve Running Shirt',
                 `Oversized Women T-Shirt`,
                 'Obey Propaganda Hat',
                 'Ray Ban Aviator Sunglasses',
                 'Reversible Horseferry Check Belt',
-                'If You Wait (donation) Picture of Night Visions',
                 'Night Visions',
                 'Science & Faith',
                 'Fahrenheit 451 by Ray Bradbury',
@@ -132,25 +127,13 @@
                 'camera',
                 'photo',
                 'cell phones',
-                'others',
-                'apparel',
                 'shoes',
-                'clothes',
-                'accesories',
-                'digital download',
-                'books',
-                'accesories',
-                'jewerly',
-                'gift-cards',
-                'table',
                 'camera',
                 'running shoes',
                 'Running shoes',
                 'Notebooks',
                 'Software',
                 'adobe photoshop cs4',
-                'Windows',
-                'Apple',
                 'MacBook',
                 'Sleekbook',
                 'HP Spectre XT Pro UltraBook',
@@ -171,6 +154,41 @@
                 'First',
             ];
 
+            var greetings = [
+                'Hi',
+                'HI',
+                'hi',
+                'hello',
+                'Hey',
+                'hi',
+                'Namaste',
+                'namaste',
+                'hola',
+            ];
+
+            var greeting_response = [
+                'Hello there, how are you?',
+                'Namaste!',
+                'Hey, how can I help you?',
+                'Nice to meet you, how can I help you today?',
+                'hello',
+                'Hey there, welcome to our website! ',
+
+            ];
+
+            var personal_questions = [
+                'ho are you',
+                'ow old are you',
+                'o you know me',
+                'where are you from',
+                'where are you',
+                're you single',
+                'marry me',
+                'I love you',
+                'an I get your number',
+                'what is your phone_number',
+
+            ];
 
             var help = [
                 'I see that you requested help',
@@ -195,28 +213,49 @@
                 
 
                      var responseNode = document.createTextNode("For any customer service assistance please enter help to view our 'Help Menu'. ");
+                 
                      var innerDiv = document.createElement('div');
-                             var node = document.createElement("p");
-                             node.className = "chat-message";
-                             node.appendChild(responseNode);
-                             innerDiv.appendChild(node);
-                             document.getElementById("chatlogs").appendChild(innerDiv);
+                     innerDiv.className = 'chat friend';
+                     innerDiv.id = 'result';
+                     document.getElementById("chatlogs").appendChild(innerDiv);
+
+                     var userPhotoDiv = document.createElement('div');
+                     userPhotoDiv.className = 'bot-photo';
+                     innerDiv.appendChild(userPhotoDiv);
+
+
+                     var node = document.createElement("p");
+                     node.className = "chat-message";
+                     node.appendChild(responseNode);
+                     innerDiv.appendChild(node);
+                     document.getElementById("chatlogs").appendChild(innerDiv);
                          
              });
 
              var chat_search_button = document.getElementById("chat_button_search").addEventListener("click", function () {
 
-                 var responseNode = document.createTextNode("For any product search enter just enter your product details below.");
+                 var responseNode = document.createTextNode("For any product search just enter product details below.");
+                 
                  var innerDiv = document.createElement('div');
+                 innerDiv.className = 'chat friend';
+                 innerDiv.id = 'result';
+                 document.getElementById("chatlogs").appendChild(innerDiv);
+
+                 var userPhotoDiv = document.createElement('div');
+                 userPhotoDiv.className = 'bot-photo';
+                 innerDiv.appendChild(userPhotoDiv);
+
+
                  var node = document.createElement("p");
                  node.className = "chat-message";
                  node.appendChild(responseNode);
                  innerDiv.appendChild(node);
                  document.getElementById("chatlogs").appendChild(innerDiv);
-                           console.log("CUST");
+                          
              });
 
-             var chat_sugguestion_button = document.getElementById("chat_button_sugguestion").addEventListener("click", function () {
+
+             function product_suggest() {
                  var rand_num = Math.floor(Math.random() * product_language.length);
                  var original_search_box = document.getElementById("small-searchterms").value = product_language[rand_num];
                  var original_search_button = document.getElementById("original_search_button").click();
@@ -231,18 +270,18 @@
                  var userPhotoDiv = document.createElement('div');
                  userPhotoDiv.className = 'bot-photo';
                  innerDiv.appendChild(userPhotoDiv);
-                 var client_message = document.getElementById('ans').value;
 
-                 var node = document.createElement("p");
-                 node.className = "chat-message";
-
-
+     
                  var node = document.createElement("p");
                  node.className = "chat-message";
                  node.appendChild(responseNode);
                  innerDiv.appendChild(node);
                  document.getElementById("chatlogs").appendChild(innerDiv);
-                 
+             }
+
+             var chat_sugguestion_button = document.getElementById("chat_button_sugguestion").addEventListener("click", function () {
+
+                 product_suggest();
              });
 
 
@@ -289,6 +328,7 @@
                     } else if (user_response == 4) {
                         option4_response_product_rec();
                         chat_bot_response = option4_response_product_rec();
+                        product_suggest();
                     } else if (user_response == 5) {
                         chat_bot_response = `To search Products write: FIND before your search input in this chat.`;
                     } else if (user_response == 6) {
@@ -297,7 +337,7 @@
                     } else if (user_response == 7) {
                         chat_bot_response = `NopCommerce is our open-source E-commerce platoform that is based upon ASP\.net MVC & MS SQL Server backend database. Development of our nopCommerce website started around 2008
                       by Andrei Mazulnitsyn, from Yaroslavi, Russia.Based on a report from December 2016, about 30,950 websites have utilized our website to expand their companies.`;
-                    } else {
+                    }  else {
                         chat_bot_response = `I didn't understand what you said. Can you repeat yourself?`;
                     }
                 } else {
@@ -315,7 +355,7 @@
 
                 var fail_responses = [
                     'Wait what?',
-                    'I here to help, would you mind repeating youself?',
+                    'I am here to help, would you mind repeating youself?',
                     'Hello there, do you need help in anything?',
                     'English is a very complicated language to comprehend, can you say that again?',
                     'Oh no, I am lost I am unable to help you, go to our Contact Us Page to write an your enquiry.',
@@ -372,6 +412,10 @@
                                 node.appendChild(responseNode);
                                 innerDiv.appendChild(node);
                                 document.getElementById("chatlogs").appendChild(innerDiv);
+                            } else if (client_message.includes("Suggest") || client_message.includes("suggest")) {
+                                product_suggest();
+                                return;
+
                             } else if (client_message.includes("find") || client_message.includes("FIND") || client_message.includes("Find") || client_message.includes("finding") || client_message.includes("FINDING") || client_message.includes("finding")) {
                                 var responseNode = document.createTextNode("I don't understand what you are trying to find, can you try telling me again...?!");
                                 var i = 0;
@@ -388,7 +432,12 @@
                                 var responseNode = document.createTextNode('I see that you are lost');
                             } else if (client_message.includes("confuse") || client_message.includes("Confuse") || client_message.includes("CONFUSE") || client_message.includes("confusing") || client_message.includes("Confusing")) {
                                 var responseNode = document.createTextNode('I know that shopping is always confusing, when you have so many amazing items to choose from. If you want, try out our product recommendation feature!');
-                            } else {
+                            } else if (client_message.includes("love") || client_message.includes("lust") || client_message.includes("old") || client_message.includes("single") || client_message.includes("marry") || client_message.includes("Marry")) { 
+                                var responseNode = document.createTextNode('Nope...I am too good for you...');
+                                    var rand_num = Math.floor(Math.random() * love_responses.length);
+                                    var responseNode = document.createTextNode(love_responses[rand_num]);
+                            }
+                            else {
                                 var responseNode = document.createTextNode(fail_to_understand_response());
                                 node.appendChild(responseNode);
                                 innerDiv.appendChild(node);
@@ -405,6 +454,17 @@
                     document.getElementById("chatlogs").appendChild(innerDiv);
                 }
             }
+
+            var love_responses = [
+                'What makes you think I will?',
+                'Go look at the mirror, then talk to me...',
+                'How would you define love?',
+                'Okay well, first tell me what is your bank account information?',
+                'Okay I love you too, if you tell me your social security number :)',
+                'Nahh, you are too good for me...',
+                'You are not worthy of my love',
+                'go look yourself in the mirror'
+            ];
 
             function help_menu_assistance(node, innerDiv) {
                 var i = 0;
