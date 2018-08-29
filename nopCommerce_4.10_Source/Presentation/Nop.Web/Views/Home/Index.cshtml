@@ -25,7 +25,14 @@
 </div>
 
 <div class="chatbox" id="chatbox">
-    <div class="chatBoxBar" id="chatBoxBar"></div>
+    <div class="chatBoxBar" id="chatBoxBar">
+        <div class="close_chat_bar">
+            <button id="close_chat">X</button>
+        </div>
+        <button id="chat_button">Customer Service</button>
+        <button id="chat_button">Search</button>
+        <button id="chat_button">Sugguestion</button>
+    </div>
     <div class="chatlogs" id="chatlogs">
         <div class="chat friend" id="result">
             <div class="bot-photo"></div>
@@ -107,6 +114,7 @@
                 'First',
             ];
 
+         
             var help = [
                 'I see that you requested help',
                 'Here is a list of categories that I can help you in: ',
@@ -121,18 +129,13 @@
             ];
 
 
-            var help = [
-                'I see that you requested help',
-                'Here is a list of categories that I can help you in: ',
-                '(Enter number or the titles of any option for further assistance)',
-                '1. Report damage products',
-                '2. Report missing delivery item',
-                '3. Need help in website direction',
-                '4. Product Sugguestion',
-                '5. Search products',
-                '6. Get customer service info',
-                '7. More Information on Nop-Commerce',
-            ];
+            
+             var chat_close_button = document.getElementById("close_chat").addEventListener("click", function () {
+                    var chatBox = document.getElementById("chatbox").style.display = 'none';
+                });
+            
+
+
 
             function option4_response_product_rec() {
                 var rand_num = Math.floor(Math.random() * 10) * Math.floor(Math.random() * 10);
@@ -232,7 +235,6 @@
                                     var responseNode = document.createTextNode("Sorry that is not one of the help menu selection.");
                                 }
 
-
                                 node.appendChild(responseNode);
                                 innerDiv.appendChild(node);
                                 document.getElementById("chatlogs").appendChild(innerDiv);
@@ -274,9 +276,6 @@
                     document.getElementById("chatlogs").appendChild(innerDiv);
                 }
             }
-
-            
-            
 
             function help_menu_assistance(node, innerDiv) {
                 var i = 0;
