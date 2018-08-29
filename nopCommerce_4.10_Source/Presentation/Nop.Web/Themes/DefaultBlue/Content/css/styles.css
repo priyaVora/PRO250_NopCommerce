@@ -758,7 +758,7 @@ label, label + * {
 .form-fields {
     position: relative;
     border-top: 1px solid #e6e6e6;
-    background-color: #000;
+    background-color: rgba(22,51,76, 1);
     padding: 30px 15px;
 }
 
@@ -1679,7 +1679,7 @@ label, label + * {
         width: 170px;
         padding-left: 0px;
         color: #fff;
-        background-color: #000;
+        background-color: rgba(24,57,84, 1);
         margin-top: -45px;
         border: none;
         font-size: 16px;
