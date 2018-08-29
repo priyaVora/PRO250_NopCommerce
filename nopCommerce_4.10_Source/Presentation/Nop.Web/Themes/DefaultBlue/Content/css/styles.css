@@ -7193,7 +7193,7 @@ pre {
 
     .cart-options .common-buttons {
         text-align: right;
-        background-color: #000;
+        background-color: rgba(24,57,84, 1);
     }
 
     .cart-options .checkout-attributes,

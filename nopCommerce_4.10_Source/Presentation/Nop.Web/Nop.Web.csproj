@@ -38,6 +38,165 @@
 
     <!-- We copy the \Logs directory -->
     <Content Include="Logs\**" CopyToPublishDirectory="PreserveNewest" />
+    <None Remove="Themes\DefaultBlue\Content\css\print.css" />
+    <None Remove="Themes\DefaultBlue\Content\css\styles.css" />
+    <None Remove="Themes\DefaultBlue\Content\css\styles.rtl.css" />
+    <None Remove="Themes\DefaultBlue\Content\images\ajax-loader-small.gif" />
+    <None Remove="Themes\DefaultBlue\Content\images\back-button.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\calendar-next.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\calendar-prev.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\close.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\compare-button.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\details.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\discontinued-product-icon.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\download-button.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\edit.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\edit_.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\email-button.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\first.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\ie_warning.jpg" />
+    <None Remove="Themes\DefaultBlue\Content\images\last.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\loading.gif" />
+    <None Remove="Themes\DefaultBlue\Content\images\logo.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\menu-icon.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\move.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\new.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\next.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\pointer.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\prev.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\rating1.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\rating2.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\remove.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\remove_.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\reply.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\retry.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\return.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\rss.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\shipping.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\shopping-bag.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\social-sprite.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\subscribe-button.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\toggle-black.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\toggle-gray.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\toggle-white.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\topic-type1.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\topic-type2.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\topic-type3.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\view-grid.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\view-list.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\vote-down-selected.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\vote-down.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\vote-up-selected.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\vote-up.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\watch.png" />
+    <None Remove="Themes\DefaultBlue\Content\images\wishlist-button.png" />
+    <None Remove="Themes\DefaultBlue\preview.jpg" />
+    <None Remove="Themes\DefaultCream\Content\css\print.css" />
+    <None Remove="Themes\DefaultCream\Content\css\styles.css" />
+    <None Remove="Themes\DefaultCream\Content\css\styles.rtl.css" />
+    <None Remove="Themes\DefaultCream\Content\images\ajax-loader-small.gif" />
+    <None Remove="Themes\DefaultCream\Content\images\back-button.png" />
+    <None Remove="Themes\DefaultCream\Content\images\calendar-next.png" />
+    <None Remove="Themes\DefaultCream\Content\images\calendar-prev.png" />
+    <None Remove="Themes\DefaultCream\Content\images\close.png" />
+    <None Remove="Themes\DefaultCream\Content\images\compare-button.png" />
+    <None Remove="Themes\DefaultCream\Content\images\details.png" />
+    <None Remove="Themes\DefaultCream\Content\images\discontinued-product-icon.png" />
+    <None Remove="Themes\DefaultCream\Content\images\download-button.png" />
+    <None Remove="Themes\DefaultCream\Content\images\edit.png" />
+    <None Remove="Themes\DefaultCream\Content\images\edit_.png" />
+    <None Remove="Themes\DefaultCream\Content\images\email-button.png" />
+    <None Remove="Themes\DefaultCream\Content\images\first.png" />
+    <None Remove="Themes\DefaultCream\Content\images\ie_warning.jpg" />
+    <None Remove="Themes\DefaultCream\Content\images\last.png" />
+    <None Remove="Themes\DefaultCream\Content\images\loading.gif" />
+    <None Remove="Themes\DefaultCream\Content\images\logo.png" />
+    <None Remove="Themes\DefaultCream\Content\images\menu-icon.png" />
+    <None Remove="Themes\DefaultCream\Content\images\move.png" />
+    <None Remove="Themes\DefaultCream\Content\images\new.png" />
+    <None Remove="Themes\DefaultCream\Content\images\next.png" />
+    <None Remove="Themes\DefaultCream\Content\images\pointer.png" />
+    <None Remove="Themes\DefaultCream\Content\images\prev.png" />
+    <None Remove="Themes\DefaultCream\Content\images\rating1.png" />
+    <None Remove="Themes\DefaultCream\Content\images\rating2.png" />
+    <None Remove="Themes\DefaultCream\Content\images\remove.png" />
+    <None Remove="Themes\DefaultCream\Content\images\remove_.png" />
+    <None Remove="Themes\DefaultCream\Content\images\reply.png" />
+    <None Remove="Themes\DefaultCream\Content\images\retry.png" />
+    <None Remove="Themes\DefaultCream\Content\images\return.png" />
+    <None Remove="Themes\DefaultCream\Content\images\rss.png" />
+    <None Remove="Themes\DefaultCream\Content\images\shipping.png" />
+    <None Remove="Themes\DefaultCream\Content\images\shopping-bag.png" />
+    <None Remove="Themes\DefaultCream\Content\images\social-sprite.png" />
+    <None Remove="Themes\DefaultCream\Content\images\subscribe-button.png" />
+    <None Remove="Themes\DefaultCream\Content\images\toggle-black.png" />
+    <None Remove="Themes\DefaultCream\Content\images\toggle-gray.png" />
+    <None Remove="Themes\DefaultCream\Content\images\toggle-white.png" />
+    <None Remove="Themes\DefaultCream\Content\images\topic-type1.png" />
+    <None Remove="Themes\DefaultCream\Content\images\topic-type2.png" />
+    <None Remove="Themes\DefaultCream\Content\images\topic-type3.png" />
+    <None Remove="Themes\DefaultCream\Content\images\view-grid.png" />
+    <None Remove="Themes\DefaultCream\Content\images\view-list.png" />
+    <None Remove="Themes\DefaultCream\Content\images\vote-down-selected.png" />
+    <None Remove="Themes\DefaultCream\Content\images\vote-down.png" />
+    <None Remove="Themes\DefaultCream\Content\images\vote-up-selected.png" />
+    <None Remove="Themes\DefaultCream\Content\images\vote-up.png" />
+    <None Remove="Themes\DefaultCream\Content\images\watch.png" />
+    <None Remove="Themes\DefaultCream\Content\images\wishlist-button.png" />
+    <None Remove="Themes\DefaultCream\preview.jpg" />
+    <None Remove="Themes\DefaultGreen\Content\css\print.css" />
+    <None Remove="Themes\DefaultGreen\Content\css\styles.css" />
+    <None Remove="Themes\DefaultGreen\Content\css\styles.rtl.css" />
+    <None Remove="Themes\DefaultGreen\Content\images\ajax-loader-small.gif" />
+    <None Remove="Themes\DefaultGreen\Content\images\back-button.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\calendar-next.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\calendar-prev.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\close.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\compare-button.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\details.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\discontinued-product-icon.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\download-button.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\edit.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\edit_.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\email-button.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\first.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\ie_warning.jpg" />
+    <None Remove="Themes\DefaultGreen\Content\images\last.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\loading.gif" />
+    <None Remove="Themes\DefaultGreen\Content\images\logo.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\menu-icon.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\move.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\new.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\next.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\pointer.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\prev.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\rating1.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\rating2.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\remove.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\remove_.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\reply.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\retry.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\return.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\rss.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\shipping.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\shopping-bag.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\social-sprite.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\subscribe-button.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\toggle-black.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\toggle-gray.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\toggle-white.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\topic-type1.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\topic-type2.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\topic-type3.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\view-grid.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\view-list.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\vote-down-selected.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\vote-down.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\vote-up-selected.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\vote-up.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\watch.png" />
+    <None Remove="Themes\DefaultGreen\Content\images\wishlist-button.png" />
+    <None Remove="Themes\DefaultGreen\preview.jpg" />
 
     <None Update="Areas\Admin\sitemap.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -46,6 +205,27 @@
 
   <ItemGroup>
     <Folder Include="Plugins\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Themes\DefaultBlue\Views\Shared\Head.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\DefaultBlue\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\DefaultCream\Views\Shared\Head.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\DefaultCream\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\DefaultGreen\Views\Shared\Head.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\DefaultGreen\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
   <!-- This target execute after "Build" target.
