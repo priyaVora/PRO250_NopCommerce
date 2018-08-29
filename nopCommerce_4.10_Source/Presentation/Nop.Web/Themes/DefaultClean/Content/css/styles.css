@@ -256,6 +256,57 @@ label, label + * {
     -moz-transition: background .2s ease;
     -o-transition: background .2s ease;
 }
+
+#chat_button_cust {
+    background: #248ece;
+    padding: 2px 10px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    margin-top: 1px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border-shadow: 0 3px 0 #0eb2c1;
+    cursor: pointer;
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    -o-transition: background .2s ease;
+}
+
+#chat_button_search {
+    background: #248ece;
+    padding: 2px 10px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    margin-top: 1px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border-shadow: 0 3px 0 #0eb2c1;
+    cursor: pointer;
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    -o-transition: background .2s ease;
+}
+
+#chat_button_sugguestion {
+    background: #248ece;
+    padding: 2px 10px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    margin-top: 1px;
+    margin-left: 3px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border-shadow: 0 3px 0 #0eb2c1;
+    cursor: pointer;
+    -webkit-transition: background .2s ease;
+    -moz-transition: background .2s ease;
+    -o-transition: background .2s ease;
+}
 #close_chat {
     margin-left: 92%;
     margin-bottom: 2%;

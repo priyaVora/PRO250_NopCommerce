@@ -29,9 +29,9 @@
         <div class="close_chat_bar">
             <button id="close_chat">X</button>
         </div>
-        <button id="chat_button">Customer Service</button>
-        <button id="chat_button">Search</button>
-        <button id="chat_button">Sugguestion</button>
+        <button class="cust" id="chat_button_cust">Customer Service</button>
+        <button class="search" id="chat_button_search">Search</button>
+        <button class="sug" id="chat_button_sugguestion">Sugguestion</button>
     </div>
     <div class="chatlogs" id="chatlogs">
         <div class="chat friend" id="result">
@@ -72,8 +72,62 @@
 
             var product_language = [
                 'computer',
+                'computer',
+                'apparel',
+                'electronics',
+                'digital downloads',
+                'books',
+                'Henna',
+                'henna',
+                'Build your own computer',
+                'build your own computer',
+                'Digital Storm VANQUISH 3 Custom Performance PC',
+                'Lenovo IdeaCentre 600 All-in-One PC',
+                'Apple MacBook Pro 13-inch',
+                'Asus N551JK-XO076H Laptop',
+                'HP Envy 6-1180ca 15.6-Inch Sleekbook',
+                'HP Spectre XT Pro UltraBook',
+                'Lenovo Thinkpad X1 Carbon Laptop',
+                'Samsung Series 9 NP900X4C Premium Ultrabook',
+                'Adobe Photoshop CS4',
+                'Sound Forge Pro 11 (recurring)',
+                'Windows 8 Pro',
+                'Nikon D5500 DSLR',
+                'Apple iCam',
+                'Leica T Mirrorless Digital Camera',
+                'HTC One M8 Android L 5.0 Lollipop',
+                'HTC One Mini Blue',
+                'Nokia Lumia 1020',
+                'Beats Pill 2.0 Wireless Speaker',
+                'Portable Sound Speakers',
+                'Universal 7-8 Inch Tablet Cover',
+                'adidas Consortium Campus 80s Running Shoes',
+                'Nike Floral Roshe Customized Running Shoes',
+                'Nike SB Zoom Stefan Janoski "Medium Mint',
+                'Custom T-Shirt',
+                `Levi\s 511 Jeans`,
+                'Nike Tailwind Loose Short-Sleeve Running Shirt',
+                `Oversized Women T-Shirt`,
+                'Obey Propaganda Hat',
+                'Ray Ban Aviator Sunglasses',
+                'Reversible Horseferry Check Belt',
+                'If You Wait (donation) Picture of Night Visions',
+                'Night Visions',
+                'Science & Faith',
+                'Fahrenheit 451 by Ray Bradbury',
+                'First Prize Pies',
+                'Pride and Prejudice',
+                'Elegant Gemstone Necklace (rental)',
+                'Flower Girl Bracelet',
+                'Computers',
                 'deskstops',
+                'Vintage Style Engagement Ring',
+                '$25 Virtual Gift Card',
+                '$50 Physical Gift Card',
+                '$100 Physical Gift Card',
                 'notebooks',
+                'Apple iCam',
+                'Apple MacBook Pro 13-inch',
                 'software',
                 'camera',
                 'photo',
@@ -117,7 +171,7 @@
                 'First',
             ];
 
-         
+
             var help = [
                 'I see that you requested help',
                 'Here is a list of categories that I can help you in: ',
@@ -132,12 +186,22 @@
             ];
 
 
-            
+
              var chat_close_button = document.getElementById("close_chat").addEventListener("click", function () {
                     var chatBox = document.getElementById("chatbox").style.display = 'none';
                 });
-            
 
+             var chat_cust_button = document.getElementById("chat_button_cust").addEventListener("click", function () {
+                 console.log("CUST");
+             });
+
+             var chat_search_button = document.getElementById("chat_button_search").addEventListener("click", function () {
+                 console.log("CUST");
+             });
+
+             var chat_sugguestion_button = document.getElementById("chat_button_sugguestion").addEventListener("click", function () {
+                 console.log("CUST");
+             });
 
 
             function option4_response_product_rec() {
@@ -151,7 +215,7 @@
                 if (rand_num < 5) {
                     chat_bot_response += `Many people buy shoes, deskstops, software products to cell phones. Why don't you search some of these products to find out, & come back to us for help after?`;
                 } else if (rand_num > 5 && rand_num < 10) {
-                    chat_bot_response += `We have some amazing technological devices that you may be interested in, some of them include, Build your own computer. For only $1,200 you can build your on computer to work on! 
+                    chat_bot_response += `We have some amazing technological devices that you may be interested in, some of them include, Build your own computer. For only $1,200 you can build your on computer to work on!
                     If you are not into that then, we have a digital storm Vanquish 3 custom performance pc. This product is a little bit expensive then the previous one I mentioned, by only $59. Well,
                     if price is one of the issues another PC we have is a Lenovo IdeaCentre 600. Its a All- One, which makes it convenient for you. And this one is ONLY $500 dollars! Why don't you check those out?!`;
                 } else if (rand_num > 10 && rand_num < 20) {
@@ -169,7 +233,7 @@
                 }
                 return chat_bot_response;
             }
-            
+
             function valid_chatbot_helpresponse(user_response) {
                 var chat_bot_response = "";
                 if (user_response != null) {
@@ -199,21 +263,21 @@
                 }
                 return chat_bot_response;
             }
-         
+
             $(window).bind('beforeunload', function () {
                 return 'Are you sure you want to leave?';
             });
 
 
             function fail_to_understand_response() {
-                
+
                 var fail_responses = [
                     'Wait what?',
                     'I here to help, would you mind repeating youself?',
                     'Hello there, do you need help in anything?',
                     'English is a very complicated language to comprehend, can you say that again?',
                     'Oh no, I am lost I am unable to help you, go to our Contact Us Page to write an your enquiry.',
-                    `Can you tell me more about this problem?`, 
+                    `Can you tell me more about this problem?`,
                     'I would pass this to our team',
                 ];
                 var rand_num = Math.floor(Math.random() * fail_responses.length);
@@ -245,6 +309,9 @@
                         var node = document.createElement("p");
                         node.className = "chat-message";
                         if (class_name == 'chat self') {
+                            if (client_message == "BYE" || client_message.includes("Bye") || client_message.includes("bye") || client_message.includes("Good by") || client_message.includes("good by")) {
+                                var chatBox = document.getElementById("chatbox").style.display = 'none';
+                            }
                             var i = 0;
                             var responseNode = document.createTextNode(client_message);
                         } else {
