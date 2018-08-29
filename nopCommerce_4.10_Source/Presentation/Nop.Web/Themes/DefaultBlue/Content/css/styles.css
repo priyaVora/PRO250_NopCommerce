@@ -758,7 +758,7 @@ label, label + * {
 .form-fields {
     position: relative;
     border-top: 1px solid #e6e6e6;
-    background-color: rgba(22,51,76, 1);
+    background-color: rgba(20,48,71, 1);
     padding: 30px 15px;
 }
 
@@ -792,7 +792,7 @@ label, label + * {
     .inputs select, .inputs textarea {
         width: 400px;
         max-width: 100%;
-        background-color: rgba(24,57,84, 1);
+        background-color: rgba(255,255,255, 1);
     }
 
     .inputs.custom-attributes {
