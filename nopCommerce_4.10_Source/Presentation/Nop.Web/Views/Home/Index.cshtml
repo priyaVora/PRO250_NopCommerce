@@ -64,7 +64,10 @@
                 'Where are you from?',
                 'What\'s your age?',
                 'What profile you are working on?',
-                'It was nice talking to you :)'
+                'It was nice talking to you :)',
+                'Happy to help, please repeat yourself first.',
+                'As much as I loved to help, I am having trouble understanding what your problem is, can you elaborate?',
+                '',
             ];
 
             var product_language = [
@@ -200,6 +203,27 @@
             $(window).bind('beforeunload', function () {
                 return 'Are you sure you want to leave?';
             });
+
+
+            function fail_to_understand_response() {
+                
+                var fail_responses = [
+                    'Wait what?',
+                    'I here to help, would you mind repeating youself?',
+                    'Hello there, do you need help in anything?',
+                    'English is a very complicated language to comprehend, can you say that again?',
+                    'Oh no, I am lost I am unable to help you, go to our Contact Us Page to write an your enquiry.',
+                    `Can you tell me more about this problem?`, 
+                    'I would pass this to our team',
+                ];
+                var rand_num = Math.floor(Math.random() * fail_responses.length);
+
+                return fail_responses[rand_num];
+            }
+
+
+
+
             function send_message_to_chat(client_message, class_name, id_name, photo_id) {
                 client_message = $.trim(client_message);
                 console.log(client_message);
@@ -226,6 +250,7 @@
                         } else {
                             if (client_message.includes('help') || client_message.includes('HELP') || client_message.includes('Help')) {
                                 help_menu_assistance(node, innerDiv);
+                                return;
                             } else if (isFinite(String(client_message))) {
                                 console.log(client_message);
 
@@ -238,10 +263,10 @@
                                 node.appendChild(responseNode);
                                 innerDiv.appendChild(node);
                                 document.getElementById("chatlogs").appendChild(innerDiv);
-                            } else if (client_message.includes("find") || client_message.includes("FIND")) {
+                            } else if (client_message.includes("find") || client_message.includes("FIND") || client_message.includes("Find") || client_message.includes("finding") || client_message.includes("FINDING") || client_message.includes("finding")) {
                                 var responseNode = document.createTextNode("I don't understand what you are trying to find, can you try telling me again...?!");
                                 var i = 0;
-                                
+
                                 loop: for (i = 0; i < product_language.length; i++) {
                                     if (client_message.includes(product_language[i])) {
                                         var responseNode = document.createTextNode('Sure I can direct you to the ' + product_language[i] + ' page. Give me one moment... It was great helping you! ');
@@ -250,17 +275,12 @@
                                         break loop;
                                     }
                                 }
-                            } else if (client_message.includes("looking") || client_message.includes(Looking) || client_message.includes("finding") || client_message.includes("Finding")) {
-                                loop: for (i = 0; i < product_language.length; i++) {
-                                    if (client_message.includes(product_language[i])) {
-                                        var responseNode = document.createTextNode('Sure I can direct you to the ' + product_language[i] + ' page. Give me one moment... It was great helping you! ');
-                                        var original_search_box = document.getElementById("small-searchterms").value = product_language[i];
-                                        var original_search_button = document.getElementById("original_search_button").click();
-                                        break loop;
-                                    }
-                                }
+                            } else if (client_message.includes("lost") || client_message.includes("Lost") || client_message.includes("LOST"))  {
+                                var responseNode = document.createTextNode('I see that you are lost');
+                            } else if (client_message.includes("confuse") || client_message.includes("Confuse") || client_message.includes("CONFUSE") || client_message.includes("confusing") || client_message.includes("Confusing")) {
+                                var responseNode = document.createTextNode('I know that shopping is always confusing, when you have so many amazing items to choose from. If you want, try out our product recommendation feature!');
                             } else {
-                                var responseNode = document.createTextNode("Sorry can I help you with something, I did not understand...?");
+                                var responseNode = document.createTextNode(fail_to_understand_response());
                                 node.appendChild(responseNode);
                                 innerDiv.appendChild(node);
                                 document.getElementById("chatlogs").appendChild(innerDiv);
@@ -279,7 +299,7 @@
 
             function help_menu_assistance(node, innerDiv) {
                 var i = 0;
-                for (i = 0; i < 11; i++) {
+                for (i = 0; i < 10; i++) {
 
                     var responseNode = document.createTextNode(help[i] + " ");
                     if (i != 10) {
@@ -334,6 +354,7 @@
 
                 $('#chatlogs').scrollTop($('#chatlogs')[0].scrollHeight);
                 console.log("NATASHA: " + questions[0]);
+                scroll_chat();
             }
 
 
